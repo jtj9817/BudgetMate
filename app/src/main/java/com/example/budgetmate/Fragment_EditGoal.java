@@ -7,71 +7,21 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
-
-import butterknife.BindView;
-import butterknife.OnCheckedChanged;
-import butterknife.OnItemSelected;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Fragment_AddGoal.OnFragmentInteractionListener} interface
+ * {@link Fragment_EditGoal.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Fragment_AddGoal#newInstance} factory method to
+ * Use the {@link Fragment_EditGoal#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment_AddGoal extends Fragment {
-    //Radio button check for
-    @OnCheckedChanged({R.id.rbutton_creditPymnt, R.id.rbutton_Home, R.id.rButton_Car, R.id.rbutton_creditPymnt})
-    public void onRadioButtonClicked(RadioButton radioButton) {
-        boolean checked = radioButton.isChecked();
-
-        // Check which radio button was clicked
-        switch (radioButton.getId()) {
-            case R.id.rbutton_creditPymnt:
-                if (checked) {
-                    // 1 clicked
-                }
-                break;
-            case R.id.rbutton_Home:
-                if (checked) {
-                    // 2 clicked
-                }
-                break;
-            case R.id.rButton_Car:
-                if (checked) {
-                    // 2 clicked
-                }
-                break;
-            case R.id.rbutton_Other:
-                if (checked) {
-                    // 2 clicked
-                }
-                break;
-        }
-    }
-
-    @BindView(R.id.editTxt_goalName)
-    EditText GoalName;
-
-    @BindView(R.id.ediTxt_duration)
-    EditText GoalDuration;
-
-    @BindView(R.id.editTxt_goalAmount)
-    EditText GoalAmount;
-
-    @OnItemSelected(R.id.spinner_goalDuration)
-    public void spinnerItemSelected(Spinner spinner, int position)
-    {
-
-    }
+public class Fragment_EditGoal extends Fragment {
+   
     private OnFragmentInteractionListener mListener;
 
-    public Fragment_AddGoal() {
+    public Fragment_EditGoal() {
         // Required empty public constructor
     }
 
@@ -81,12 +31,14 @@ public class Fragment_AddGoal extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_AddGoal.
+     * @return A new instance of fragment Fragment_EditGoal.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment_AddGoal newInstance(String param1, String param2) {
-        Fragment_AddGoal fragment = new Fragment_AddGoal();
+    public static Fragment_EditGoal newInstance(String param1, String param2) {
+        Fragment_EditGoal fragment = new Fragment_EditGoal();
         Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -95,13 +47,14 @@ public class Fragment_AddGoal extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         TextView textView = new TextView(getActivity());
         textView.setText(R.string.hello_blank_fragment);
         return textView;
