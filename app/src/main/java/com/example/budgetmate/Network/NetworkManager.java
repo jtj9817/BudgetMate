@@ -139,4 +139,114 @@ public class NetworkManager {
         postRespObj respObj = gson.fromJson(response, postRespObj.class);
         return respObj.successful;
     }
+
+    public static UserDebts retrieveUserDebts(String token) throws IOException {
+        Gson gson = new Gson();
+        RetrieveDebtsObj retrieveDebtsObj = new RetrieveDebtsObj(token);
+        String retrieveDebtsJSON = gson.toJson(retrieveDebtsObj);
+        String response = makePostRequest(retrieveDebtsJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        String debts = respObj.result;
+        return gson.fromJson(debts, UserDebts.class);
+    }
+
+    public static Debt createNewDebt(String token, String debtName, Double debtInitial, Double debtCurrent, Double interestRate, Integer compoundFrequency, Double totalPaid) throws IOException {
+        Gson gson = new Gson();
+        CreateDebtObj createDebtObj = new CreateDebtObj(token, debtName, debtInitial, debtCurrent, interestRate, compoundFrequency, totalPaid);
+        String createDebtJSON = gson.toJson(createDebtObj);
+        String response = makePostRequest(createDebtJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        String user = respObj.result;
+        return gson.fromJson(user, Debt.class);
+    }
+
+    public static boolean deleteDebt(String token, String debtID) throws IOException {
+        Gson gson = new Gson();
+        DeleteDebtObj deleteDebtObj = new DeleteDebtObj(token, debtID);
+        String deleteDebtJSON = gson.toJson(deleteDebtObj);
+        String response = makePostRequest(deleteDebtJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtName(String token, String debtID, String debtName) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtNameObj updateDebtNameObj = new UpdateDebtNameObj(token, debtID, debtName);
+        String updateDebtNameJSON = gson.toJson(updateDebtNameObj);
+        String response = makePostRequest(updateDebtNameJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtInitial(String token, String debtID, Double debtInitial) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtInitialObj updateDebtInitialObj = new UpdateDebtInitialObj(token, debtID, debtInitial);
+        String updateDebtInitialJSON = gson.toJson(updateDebtInitialObj);
+        String response = makePostRequest(updateDebtInitialJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtCurrent(String token, String debtID, Double debtCurrent) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtCurrentObj updateDebtCurrentObj = new UpdateDebtCurrentObj(token, debtID, debtCurrent);
+        String updateDebtCurrentJSON = gson.toJson(updateDebtCurrentObj);
+        String response = makePostRequest(updateDebtCurrentJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtInterestRate(String token, String debtID, Double debtInterestRate) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtInterestRateObj updateDebtInterestRateObj = new UpdateDebtInterestRateObj(token, debtID, debtInterestRate);
+        String updateDebtInterestRateJSON = gson.toJson(updateDebtInterestRateObj);
+        String response = makePostRequest(updateDebtInterestRateJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtCompoundFrequency(String token, String debtID, Integer debtCompoundFrequency) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtCompoundFrequencyObj updateDebtCompoundFrequencyObj = new UpdateDebtCompoundFrequencyObj(token, debtID, debtCompoundFrequency);
+        String updateDebtCompoundFrequencyJSON = gson.toJson(updateDebtCompoundFrequencyObj);
+        String response = makePostRequest(updateDebtCompoundFrequencyJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtTotalPaid(String token, String debtID, Double debtTotalPaid) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtTotalPaidObj updateDebtTotalPaidObj = new UpdateDebtTotalPaidObj(token, debtID, debtTotalPaid);
+        String updateDebtTotalPaidJSON = gson.toJson(updateDebtTotalPaidObj);
+        String response = makePostRequest(updateDebtTotalPaidJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtFinished(String token, String debtID) throws IOException {
+        Gson gson = new Gson();
+        UpdateDebtFinishedObj updateDebtFinishedObj = new UpdateDebtFinishedObj(token, debtID);
+        String updateDebtFinishedJSON = gson.toJson(updateDebtFinishedObj);
+        String response = makePostRequest(updateDebtFinishedJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtActivate(String token, String debtID) throws IOException {
+        Gson gson = new Gson();
+        ActivateDebtObj activateDebtObj = new ActivateDebtObj(token, debtID);
+        String activateDebtJSON = gson.toJson(activateDebtObj);
+        String response = makePostRequest(activateDebtJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
+
+    public static boolean updateDebtDisable(String token, String debtID) throws IOException {
+        Gson gson = new Gson();
+        DisableDebtObj disableDebtObj = new DisableDebtObj(token, debtID);
+        String disableDebtJSON = gson.toJson(disableDebtObj);
+        String response = makePostRequest(disableDebtJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        return respObj.successful;
+    }
 }
