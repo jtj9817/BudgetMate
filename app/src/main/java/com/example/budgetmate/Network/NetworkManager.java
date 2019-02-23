@@ -1,5 +1,8 @@
 package com.example.budgetmate.Network;
 
+import com.example.budgetmate.Models.User;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 
 import okhttp3.MediaType;
@@ -26,6 +29,13 @@ public class NetworkManager {
         }
     }
 
-
-
+    public static User retrieveUser(String token) throws IOException {
+        Gson gson = new Gson();
+        RetrieveUserObj retrieveUserObj = new RetrieveUserObj(token);
+        String retrieveUserJSON = gson.toJson(retrieveUserObj);
+        String response = makePostRequest(retrieveUserJSON);
+        postRespObj respObj = gson.fromJson(response, postRespObj.class);
+        String user = respObj.result;
+        return gson.fromJson(user, User.class);
+    }
 }
