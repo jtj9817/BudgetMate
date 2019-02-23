@@ -37,7 +37,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:text="Give Your Goal A Name"
+        android:text="Edit Goal Name"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -65,7 +65,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:text="How Much Does Your Goal Cost?"
+        android:text="Revised Goal Cost"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTxt_goalName" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTxt_goalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -106,52 +106,26 @@
         android:layout_width="86dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rButton_shortTerm" />
+        app:layout_constraintTop_toBottomOf="@+id/f_subheader4" />
 
     <Spinner
         android:id="@+id/spinner_goalDuration"
         android:layout_width="166dp"
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toEndOf="@+id/ediTxt_duration"
-        app:layout_constraintTop_toBottomOf="@+id/rbutton_longTerm" />
-
-    <RadioButton
-        android:id="@+id/rButton_shortTerm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Short Term"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_subheader4" />
-
-    <RadioButton
-        android:id="@+id/rbutton_longTerm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Long Term"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toEndOf="@+id/rButton_shortTerm"
         app:layout_constraintTop_toBottomOf="@+id/f_subheader4" />
 
     <Button

@@ -18,7 +18,7 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class Fragment_EditGoal extends Fragment {
-   
+
     private OnFragmentInteractionListener mListener;
 
     public Fragment_EditGoal() {
@@ -37,8 +37,6 @@ public class Fragment_EditGoal extends Fragment {
     public static Fragment_EditGoal newInstance(String param1, String param2) {
         Fragment_EditGoal fragment = new Fragment_EditGoal();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -47,17 +45,14 @@ public class Fragment_EditGoal extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
-        return textView;
+        View view = inflater.inflate(R.layout.fragment_editgoal, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
