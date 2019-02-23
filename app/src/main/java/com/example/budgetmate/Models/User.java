@@ -9,6 +9,8 @@ public class User {
     private String lastName;
     private Date dateJoined;
     private Date lastConnected;
+    private UserDebts userDebts;
+    private UserGoals userGoals;
 
     public String getEmail() {
         return email;
@@ -48,5 +50,21 @@ public class User {
 
     public void setLastConnected(Date lastConnected) {
         this.lastConnected = lastConnected;
+    }
+
+    public UserDebts getUserDebts() {
+        return userDebts;
+    }
+
+    public void setUserDebts(UserDebts userDebts) {
+        this.userDebts = userDebts;
+    }
+
+    public UserGoals getUserGoals() {
+        return userGoals;
+    }
+
+    public void setUserGoals(UserGoals userGoals) {
+        this.userGoals = userGoals;
     }
 }
