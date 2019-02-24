@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "183287195561",
+    "firebase_url": "https://budgetmate-e96c6.firebaseio.com",
+    "project_id": "budgetmate-e96c6",
+    "storage_bucket": "budgetmate-e96c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183287195561:android:8d9325319fc827d6",
+        "android_client_info": {
+          "package_name": "com.example.budgetmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183287195561-utm7qkime1md5v4diosb7pmolfoki0d2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.budgetmate",
+            "certificate_hash": "e7dcc55be0ec496e55b73e01ef34dc99c256037c"
+          }
+        },
+        {
+          "client_id": "183287195561-b3crl2gc22otk9c8ig0ik41od3vs7s6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIhiltgmM889OjxS9FbYISe2EvED2DjII"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183287195561-b3crl2gc22otk9c8ig0ik41od3vs7s6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
