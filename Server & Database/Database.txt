@@ -1,0 +1,14 @@
+The MySQL is hosted on Google Cloud Platform
+
+// var dbConfig = {
+//   connStr: "jdbc:google:mysql://affable-operand-232600:us-central1:htv-3-project/HTV3_DB",
+//   user: "root",
+//   password: "Dyoo7BNJ7zmHpaK5"  
+// }
+
+Database structure available in DB_Structure.png
+
+All operations to the database are performed from the server side Google Apps Script Web App
+(https://script.google.com/macros/s/AKfycbxtoBjl9VmuRsInYbCEcGHOve9y2aMbD8BFd6Lpkl__BVVLFFU/exec)
+which runs the requested queries using prepared statements to prevent SQL injection and retrieves info or updates the Database
+

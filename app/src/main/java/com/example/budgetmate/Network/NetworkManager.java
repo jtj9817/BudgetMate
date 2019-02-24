@@ -140,6 +140,10 @@ public class NetworkManager {
         return respObj.successful;
     }
 
+    /*
+        Debts
+     */
+
     public static UserDebts retrieveUserDebts(String token) throws IOException {
         Gson gson = new Gson();
         RetrieveDebtsObj retrieveDebtsObj = new RetrieveDebtsObj(token);
