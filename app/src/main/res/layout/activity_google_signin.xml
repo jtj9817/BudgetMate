@@ -12,6 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:gravity="center_horizontal"
+        android:background="@color/blue_grey_900"
         android:orientation="vertical">
 
         <ImageView
@@ -58,8 +59,10 @@
             style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            tools:text="Optional Action"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            android:visibility="visible"
+            tools:text="Redirect To Main"
             tools:visibility="visible" />
 
     </LinearLayout>
