@@ -49,6 +49,8 @@ public class SignInActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
+
         setContentView(R.layout.activity_google_signin);
 
         // Views
@@ -72,8 +74,7 @@ public class SignInActivity extends BaseActivity implements
 
         // [START initialize_auth]
         // Initialize Firebase Auth
-        FirebaseApp.initializeApp(this);
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
         SignInButton signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
