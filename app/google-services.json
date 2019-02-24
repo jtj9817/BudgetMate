@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "183287195561-kddltleshkothrfmdh04166rjsc1vuso.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.budgetmate",
+            "certificate_hash": "a470b0702e733ae48054228baa5c2b628f6e7962"
+          }
+        },
+        {
           "client_id": "183287195561-b3crl2gc22otk9c8ig0ik41od3vs7s6j.apps.googleusercontent.com",
           "client_type": 3
         }
